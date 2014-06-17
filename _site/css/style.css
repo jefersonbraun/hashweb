@@ -1,0 +1,40 @@
+body {
+    font-family: 'Kirvy', sans-serif;
+    font-weight:lighter;
+}
+
+.top-bar {
+    height:69px;
+    background:#57050d;
+}
+
+.top-bar a {
+    color:#e88281;
+    text-decoration:none;
+}
+
+.top-bar ul {
+    list-style:none;
+    -webkit-margin-before:0;
+}
+
+.top-bar li {
+    float:left;
+}
+
+.top-bar .name {
+    padding: 16px 20px;
+}
+
+.top-bar .contato {
+    font-size:20px;
+    font-weight:lighter;
+    padding: 24px 20px;
+}
+
+.top-bar li:hover {
+    background-color: #57050d; /* layer fill content */
+    -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+}

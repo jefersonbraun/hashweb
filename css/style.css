@@ -1,0 +1,125 @@
+body {
+    padding-top: 69px;
+    font-family: 'Kirvy', sans-serif;
+    font-weight:lighter;
+}
+
+.contain-to-grid {
+    background:#57050d;
+}
+
+.top-bar {
+    height:69px;
+    background-color: #57050d; /* layer fill content */
+    -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+}
+
+.top-bar a {
+    color:#e88281;
+    text-decoration:none;
+}
+
+.top-bar ul {
+    list-style:none;
+    -webkit-margin-before:0;
+}
+
+.top-bar li {
+    float:left;
+}
+
+.top-bar .name {
+    height: 0px;
+    padding: 16px 20px 53px 20px;
+}
+
+.top-bar .contato {
+    font-size:20px;
+    font-weight:lighter;
+    padding: 18px 20px;
+}
+
+.top-bar li:hover {
+    background-color: #57050d; /* layer fill content */
+    -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+}
+
+.texture {
+    background:#7a121c;
+    background-image:url(../img/listra-1.png), url(../img/listra-2.png), url(../img/textura.png);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: -204px -204px, right -175px top 24px;
+    height: 574px;
+}
+
+@media (max-width: 1023px) {
+    .texture {
+        background-position: -204px -204px, right -175px top 0px;
+        height: 454px;
+    }
+}
+
+@media (max-width: 767px) {
+    .texture {
+        background-position: -204px -204px, right -175px top 0px;
+        height: 454px;
+    }
+}
+
+@media (max-width: 460px) {
+    .texture {
+        background-position: -204px -204px, right -225px top 0px;
+        height: 454px;
+    }
+}
+
+.listra-1 {
+    height: 500px;
+    
+    overflow: visible;
+}
+
+.slogan {
+    margin-top: 24px;
+    
+    font-family: Kirvy;
+    color:#e88281;
+    font-size: 92px;
+    line-height: 100%;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.description {
+    margin-top: 24px;
+    
+    font-family: Kirvy;
+    color:#e88281;
+    font-size: 12px;
+    line-height: 300%;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.logo-centro {
+    margin-top: 100px;
+    width: 280px;
+    height: 219px;
+}
+
+@media only screen and (max-width: 40em) { /* max-width 640px */
+    .slogan {
+        margin-top: 48px;
+        font-size: 80px;
+    }
+    
+    .logo-centro {
+        margin-top: 140px;
+        width: 172px !important;
+        height: 134px !important;
+    }
+}
