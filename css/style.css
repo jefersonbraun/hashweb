@@ -123,3 +123,43 @@ body {
         height: 134px !important;
     }
 }
+
+.contact {
+    margin-top: 24px;
+
+    font-family: Kirvy;
+    color:#e88281;
+    font-size: 92px;
+    line-height: 100%;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.texture-2 {
+    background:#7a121c;
+    background-image:url(../img/listra-1.png), url(../img/listra-1.png), url(../img/texture-2.png);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: -346px -204px, right -346px top 24px;
+    height: 574px;
+}
+
+@media (max-width: 1023px) {
+    .texture-2 {
+        background-position: -346px -204px, right -346px top 0px;
+        height: 454px;
+    }
+}
+
+@media (max-width: 767px) {
+    .texture-2 {
+        background-position: -346px -204px, right -346px top 0px;
+        height: 454px;
+    }
+}
+
+@media (max-width: 460px) {
+    .texture-2 {
+        background-position: -346px -204px, right -346px top 0px;
+        height: 454px;
+    }
+}
