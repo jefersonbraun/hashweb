@@ -231,3 +231,21 @@ address {
     font-weight: bolder;
     margin-top: 814px;
 }
+
+.success {
+    margin-top: 275px;
+    
+    background-color: #57050d; /* layer fill content */
+    -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+    
+    border: none;
+}
+
+.success p {
+    color: #ccb3b7; /* text color */
+    font-family: "Kirvy";
+    font-weight: lighter;
+    text-align: center;
+}
