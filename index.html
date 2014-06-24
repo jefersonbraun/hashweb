@@ -10,6 +10,16 @@
         <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
+        
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=280817618656457&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
         <div class="fixed">
             <nav class="top-bar" data-topbar>
                 <div class="row">
@@ -76,7 +86,13 @@
                         </div>
                     </form>
                 </div>
-                <div class="large-3 show-for-large-up columns">  
+                <div class="large-3 show-for-large-up columns">
+                    <address>
+                        <img src="img/logo_32.png" /><br />
+                        <small>51</small> 9415.0924<br />
+                        contato@hashweb.com.br
+                    </address>
+                    <div class="fb-like" data-href="https://www.facebook.com/hashwebsolutions" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
             </div>
         </div>

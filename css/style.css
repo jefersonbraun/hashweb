@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Kirvy;
+    src: url(../fonts/kirvy-bold-webfont.woff);
+}
+
+@font-face {
+    font-family: Kirvy;
+    src: url(../fonts/kirvy-thin-webfont.woff);
+}
+
 body {
     padding-top: 69px;
     font-family: 'Kirvy', sans-serif;
@@ -212,4 +222,12 @@ button, .button:hover{
     -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.81); /* drop shadow */
     -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.81); /* drop shadow */
     box-shadow: -2px 3px 40px rgba(24,24,24,.81); /* drop shadow */
+}
+
+address {
+    font-style: normal;
+    text-align: center;
+    color: #e88281;
+    font-weight: bolder;
+    margin-top: 884px;
 }
