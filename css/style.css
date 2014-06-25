@@ -145,12 +145,18 @@ body {
     text-align: center;
 }
 
+@media only screen and (max-width: 40em) { /* max-width 640px */
+    .contact {
+        font-size: 80px;
+    }
+}
+
 .texture-2 {
     background:#7a121c;
     background-image:url(../img/listra-1.png), url(../img/listra-1.png), url(../img/texture-2.png);
     background-repeat: no-repeat, no-repeat, repeat;
-    background-position: -346px -204px, right -346px top 524px;
-    height: 1074px;
+    background-position: -346px -204px, right -220px top 444px;
+    height: 990px;
 }
 
 @media (max-width: 1023px) {
@@ -229,7 +235,7 @@ address {
     text-align: center;
     color: #e88281;
     font-weight: bolder;
-    margin-top: 814px;
+    margin-top: 852px;
 }
 
 .success {
