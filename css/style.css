@@ -238,8 +238,13 @@ address {
     margin-top: 814px;
 }
 
+.submit-button-wrapper {
+    position: relative;
+}
+
 .success {
-    margin-top: 360px;
+    position: absolute;
+    top: 0px;
     
     background-color: #57050d; /* layer fill content */
     -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
