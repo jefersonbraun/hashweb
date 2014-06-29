@@ -239,12 +239,14 @@ address {
 }
 
 .submit-button-wrapper {
+    width: 100%;
+    min-height: 10px;
     position: relative;
 }
 
 .success {
     position: absolute;
-    top: 0px;
+    bottom: 100%;
     
     background-color: #57050d; /* layer fill content */
     -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
@@ -261,7 +263,7 @@ address {
     text-align: center;
 }
 
-.success:after {
+/*.success:after {
     content: "";
     display: block;
     width: 0;
@@ -273,7 +275,7 @@ address {
     bottom: -12px;
     left: 75px;
     z-index: 99;
-}
+}*/
 
 @media only screen and (max-width: 40em) {
     .reveal-modal {
