@@ -245,15 +245,13 @@ address {
 }
 
 .success {
-    position: absolute;
-    bottom: 100%;
+    background: #57050d; /* layer fill content */
     
-    background-color: #57050d; /* layer fill content */
-    -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
-    -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
-    box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
     
-    border: none;
+    border-radius: 5px; 
+	border: 2px solid #000;
+	background: #4c4c4c;
+	color: #fff;
 }
 
 .success p {
@@ -276,39 +274,3 @@ address {
     left: 75px;
     z-index: 99;
 }*/
-
-@media only screen and (max-width: 40em) {
-    .reveal-modal {
-        min-height: 0;
-    }
-    
-    .success {
-        margin-top: 416px;
-    }
-    
-    .success:after {
-        left: 50%;
-    }
-    
-    .tiny, .reveal-modal.tiny {
-        margin-left: 81px;
-        width: 162px;
-        height: 112px;
-    }
-}
-@media only screen and (min-width: 40.063em) {
-    .tiny, .reveal-modal.tiny {
-        margin-left: -81px;
-        width: 162px;
-        height: 112px;
-    }
-    
-    .success {
-        margin-top: 384px;
-    }
-}
-
-dialog .close-reveal-modal, .reveal-modal .close-reveal-modal {
-font-size: 2rem;
-top: -5px;
-}

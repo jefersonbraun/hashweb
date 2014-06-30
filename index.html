@@ -4,10 +4,13 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hashweb | Web Competitiva</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />        
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <script src="js/vendor/modernizr.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
+        
     </head>
     <body>
         
@@ -83,12 +86,7 @@
                                 <textarea placeholder="mensagem"></textarea>
                             </div>
                             <div class="submit-button-wrapper">
-                                <a href="#" data-reveal-id="success" class="button">enviar</a>
-
-                                <div id="success" class="reveal-modal tiny success" data-reveal>
-                                  <p>mensagem<br />enviada.</p>
-                                  <a class="close-reveal-modal"><small>x</small></a>
-                                </div>
+                                <a href="#" class="button tooltipster" title="mensagem enviada.">enviar</a>
                             </div>
                             
                         </div>
@@ -105,12 +103,26 @@
             </div>
         </div>
         
-        <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation/foundation.js"></script>
         <script src="js/foundation/foundation.reveal.js"></script>
+        <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
 
         <script>
             $(document).foundation();
         </script>
+        
+        <script>
+            $(document).ready(function() {
+                $('.tooltipster').tooltipster({
+                    animation: 'fade',
+                    delay: 200,
+                    touchDevices: true,
+                    trigger: 'click',
+                    theme: 'tooltipster-default'
+                });
+                
+            });
+        </script>
+        
     </body>
 </html>
