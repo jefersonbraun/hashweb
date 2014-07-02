@@ -27,35 +27,27 @@ body {
 }
 
 .top-bar a {
+    float: left;
     color:#e88281;
     text-decoration:none;
 }
 
-.top-bar ul {
-    list-style:none;
-    -webkit-margin-before:0;
-}
-
-.top-bar li {
-    float:left;
-}
-
-.top-bar .name {
-    height: 0px;
-    padding: 16px 20px 53px 20px;
-}
-
-.top-bar .contato {
-    font-size:20px;
-    font-weight:lighter;
-    padding: 18px 20px;
-}
-
-.top-bar li:hover {
+.top-bar a:hover, a.active {
     background-color: #57050d; /* layer fill content */
     -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
     -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
     box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
+}
+
+.top-bar .menu-logo {
+    height: 0px;
+    padding: 12px 20px 57px 20px;
+}
+
+.top-bar .menu-item {
+    font-size:20px;
+    font-weight:lighter;
+    padding: 12px 20px;
 }
 
 .texture {
