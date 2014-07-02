@@ -81,13 +81,13 @@ body {
 
 .listra-1 {
     height: 500px;
-    
+
     overflow: visible;
 }
 
 .slogan {
     margin-top: 24px;
-    
+
     font-family: Kirvy;
     color:#e88281;
     font-size: 92px;
@@ -98,7 +98,7 @@ body {
 
 .description {
     margin-top: 24px;
-    
+
     font-family: Kirvy;
     color:#e88281;
     font-size: 12px;
@@ -116,13 +116,13 @@ body {
 @media only screen and (max-width: 40em) { /* max-width 640px */
     .slogan {
         margin-top: 48px;
-        font-size: 80px;
+        font-size: 70px;
     }
-    
+
     .logo-centro {
-        margin-top: 140px;
-        width: 172px !important;
-        height: 134px !important;
+      margin-top: 135px;
+      width: 172px !important;
+      height: 110px !important;
     }
 }
 
@@ -204,12 +204,12 @@ button, .button {
     width: 118px;
     padding-top: 15px;
     padding-bottom: 15px;
-    
+
     background-color: #57050d; /* layer fill content */
     -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
     -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
     box-shadow: -2px 3px 40px rgba(24,24,24,.21); /* drop shadow */
-    
+
     font-size: 20px;
     font-weight: lighter;
     color: #e88281;
@@ -238,9 +238,9 @@ address {
 
 .success {
     background: #57050d; /* layer fill content */
-    
-    
-    border-radius: 5px; 
+
+
+    border-radius: 5px;
 	border: 2px solid #000;
 	background: #4c4c4c;
 	color: #fff;
