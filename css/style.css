@@ -215,7 +215,7 @@ button, .button {
     color: #e88281;
 }
 
-button, .button:hover{
+button, .button:hover, .button:focus{
     background-color: #57050d; /* layer fill content */
     -moz-box-shadow: -2px 3px 40px rgba(24,24,24,.81); /* drop shadow */
     -webkit-box-shadow: -2px 3px 40px rgba(24,24,24,.81); /* drop shadow */
