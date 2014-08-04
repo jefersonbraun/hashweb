@@ -1,11 +1,13 @@
 @font-face {
     font-family: Kirvy;
     src: url(../fonts/kirvy-bold-webfont.woff);
+    font-weight:bold;
 }
 
 @font-face {
     font-family: Kirvy;
     src: url(../fonts/kirvy-thin-webfont.woff);
+    font-weight:lighter;
 }
 
 body {
