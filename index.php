@@ -81,14 +81,14 @@
                         if ($_POST['submit']) {
                         /* Anything that goes in here is only performed if the form is submitted */
                             if (mail ($to, $subject, $body, $from)) { 
-                            echo '<script>alert('Mensagem Sucesso');</script>';
+                            echo '<p>Your message has been sent!</p>';
                             } else { 
-                            echo '<script>alert('Mensagem Erro');</script>';
+                            echo '<p>Something went wrong, go back and try again!</p>';
                             }
                         }
                     ?>
                     
-                    <form name="htmlform" method="post" action="html_form_send.php">
+                    <form name="htmlform" method="post" action="index.php">
                         <div class="row">
                             <div class="medium-6 medium-centered large-12 columns">
                                 <input type="text" name="name" id="name" placeholder="nome" />
