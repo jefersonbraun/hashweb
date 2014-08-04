@@ -71,7 +71,7 @@
                         $email = $_POST['email'];
                         $mensagem = $_POST['mensagem'];
                         $from = 'From: TangledDemo'; 
-                        $to = 'jefersonbbraun@gmail.com'; 
+                        $to = 'contato@hashweb.com.br'; 
                         $subject = 'Mensagem enviada através de hashweb.com.br';
 
                         $body = "From: $name\n E-Mail: $email\n Message:\n $message";
@@ -87,6 +87,8 @@
                             }
                         }
                     ?>
+                    
+                    <p>Your message has been sent!</p>
                     
                     <form name="htmlform" method="post" action="index.php">
                         <div class="row">
