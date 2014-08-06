@@ -122,6 +122,9 @@
 					
 				  // Send the data using post
 				  var posting = $.post( url, { name: name, email:email,telefone:telefone, msg:mensagem } );
+                    
+                    $('form')[0].reset();
+                    
 				});
 
                 $('.tooltipster').tooltipster({

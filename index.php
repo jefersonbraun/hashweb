@@ -25,6 +25,42 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         
+        <script>
+          $(function () {
+
+            $('form').on('submit', function (e) {
+
+              e.preventDefault();
+
+              $.ajax({
+                type: 'post',
+                url: 'index.php',
+                data: $('form').serialize(),
+                success: function () {
+                    <?php
+                        if ($_POST['enviar']) {
+                            if ($nome != '' && $email != '' && $mensagem != '') {
+                                if (mail ($to, $subject, $body, $from)) { 
+                                    echo "<script type='text/javascript'>alert('form was submitted')</script>";
+                                } else { 
+                                    echo '<p>Ocorreu um erro, tente novamente, por favor!</p>'; 
+                                }
+                            } else {
+                                echo '<p>Por favor, preencha todos os campos.</p>';
+                            }
+                        }
+                    ?>
+                    $('form')[0].reset();
+                }
+              });
+
+            });
+
+          });
+        </script>
+        
+        
+        
         <div class="fixed">
             <nav class="top-bar" data-topbar>
                 <div class="row">
@@ -67,33 +103,21 @@
                     </h2>
                     
                     <?php
-                        $name = $_POST['name'];
+                        $nome = $_POST['nome'];
                         $email = $_POST['email'];
+                        $telefone = $_POST['telefone'];
                         $mensagem = $_POST['mensagem'];
-                        $from = 'From: TangledDemo'; 
+                        $from = 'From: hashweb.com.br'; 
                         $to = 'contato@hashweb.com.br'; 
                         $subject = 'Mensagem enviada através de hashweb.com.br';
 
-                        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-                    ?>
-
-                    <?php
-                        if ($_POST['submit']) {
-                        /* Anything that goes in here is only performed if the form is submitted */
-                            if (mail ($to, $subject, $body, $from)) { 
-                            echo '<p>Your message has been sent!</p>';
-                            } else { 
-                            echo '<p>Something went wrong, go back and try again!</p>';
-                            }
-                        }
+                        $body = "From: $nome\n E-Mail: $email\n Telefone: $telefone\n Message:\n $message";
                     ?>
                     
-                    <p>Your message has been sent!</p>
-                    
-                    <form name="htmlform" method="post" action="index.php">
+                    <form>
                         <div class="row">
                             <div class="medium-6 medium-centered large-12 columns">
-                                <input type="text" name="name" id="name" placeholder="nome" />
+                                <input type="text" name="nome" id="nome" placeholder="nome" />
                             </div>
                             <div class="medium-6 medium-centered large-12 columns">
                                 <input type="text" name="email" id="email" placeholder="e-mail" />
@@ -104,8 +128,8 @@
                             <div class="medium-6 medium-centered large-12 columns">
                                 <textarea name="mensagem" id="mensagem" placeholder="mensagem"></textarea>
                             </div>
-
-                            <input type="submit" class="button" value="Enviar">
+                            
+                            <input type="submit" name="enviar" class="button" value="Enviar">
                             
                         </div>
                     </form>
