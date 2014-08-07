@@ -67,7 +67,7 @@
                     <form id="mail-form" action="mail.php">
                         <div class="row">
                             <div class="medium-6 medium-centered large-12 columns">
-                                    <input type="text" name="name" id="name" placeholder="nome" />
+                                    <input type="text" name="name" id="name" placeholder="nome" title="por favor, insira seu nome" />
                             </div>
                             <div class="medium-6 medium-centered large-12 columns">
                                 <input type="text" name="email" id="email" placeholder="e-mail" />
@@ -123,27 +123,21 @@
 					url = $form.attr( "action" );
 					errorMessage=""
 					if(name == ""){
-						errorMessage="Nome deve ser obrigatorio\n";
-                        $('.tooltipster').tooltipster('disable');
+                        $('.tooltipster').tooltipster('content', 'por favor, preencha todos os campos.');
 					}
 					if(email == ""){
-						errorMessage=errorMessage+"email deve ser obrigatorio\n";
-                        $('.tooltipster').tooltipster('disable');
+						$('.tooltipster').tooltipster('content', 'por favor, preencha todos os campos.');
 					}
 					if(telefone == ""){
-						errorMessage=errorMessage+"telefone deve ser obrigatorio\n";
-                        $('.tooltipster').tooltipster('disable');
+						$('.tooltipster').tooltipster('content', 'por favor, preencha todos os campos.');
 					}
 					if(mensagem == ""){
-						errorMessage=errorMessage+"mensagem deve ser obrigatorio\n";
-                        $('.tooltipster').tooltipster('disable');
+						$('.tooltipster').tooltipster('content', 'por favor, preencha todos os campos.');
 					}
-					if(errorMessage !=""){
-						alert(errorMessage);
-					}else{
+					else{
                         var posting = $.post( url, { name: name, email:email,telefone:telefone, msg:mensagem } );
                         $('form')[0].reset();
-                        $('.tooltipster').tooltipster('enable');
+                        $('.tooltipster').tooltipster('content', 'mensagem enviada.');
 					}
 					errorMessage = "";
 				  // Send the data using post
@@ -161,6 +155,7 @@
                 trigger: 'click',
                 theme: 'tooltipster-default'
             });
+            
         </script>
         
         <script>
