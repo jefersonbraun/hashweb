@@ -108,7 +108,7 @@
         <script>
             $(document).ready(function()
 			{
-				
+                
 				$( ".tooltipster" ).click(function( event ) {
 							
 				  // Stop form from submitting normally
@@ -124,35 +124,42 @@
 					errorMessage=""
 					if(name == ""){
 						errorMessage="Nome deve ser obrigatorio\n";
+                        $('.tooltipster').tooltipster('disable');
 					}
 					if(email == ""){
 						errorMessage=errorMessage+"email deve ser obrigatorio\n";
+                        $('.tooltipster').tooltipster('disable');
 					}
 					if(telefone == ""){
 						errorMessage=errorMessage+"telefone deve ser obrigatorio\n";
+                        $('.tooltipster').tooltipster('disable');
 					}
 					if(mensagem == ""){
 						errorMessage=errorMessage+"mensagem deve ser obrigatorio\n";
+                        $('.tooltipster').tooltipster('disable');
 					}
 					if(errorMessage !=""){
 						alert(errorMessage);
 					}else{
-						var posting = $.post( url, { name: name, email:email,telefone:telefone, msg:mensagem } );
-						   $('.tooltipster').tooltipster({
-							animation: 'fade',
-							delay: 200,
-							touchDevices: true,
-							trigger: 'click',
-							theme: 'tooltipster-default'
-                });
+                        var posting = $.post( url, { name: name, email:email,telefone:telefone, msg:mensagem } );
+                        $('form')[0].reset();
+                        $('.tooltipster').tooltipster('enable');
 					}
 					errorMessage = "";
 				  // Send the data using post
 				  
 				});
 
-             
-                
+            });
+        </script>
+        
+        <script>
+            $('.tooltipster').tooltipster({
+                animation: 'fade',
+                delay: 200,
+                touchDevices: true,
+                trigger: 'click',
+                theme: 'tooltipster-default'
             });
         </script>
         
