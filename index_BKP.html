@@ -10,8 +10,7 @@
         <link rel="stylesheet" href="css/foundation.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
-
-
+        
     </head>
     <body>
         
@@ -67,7 +66,7 @@
                     <form id="mail-form" action="mail.php">
                         <div class="row">
                             <div class="medium-6 medium-centered large-12 columns">
-                                    <input type="text" name="name" id="name" placeholder="nome" />
+                                <input type="text" name="name" id="name" placeholder="nome" />
                             </div>
                             <div class="medium-6 medium-centered large-12 columns">
                                 <input type="text" name="email" id="email" placeholder="e-mail" />
@@ -79,7 +78,7 @@
                                 <textarea name="msg" id="msg" placeholder="mensagem"></textarea>
                             </div>
                            
-                            <a href="#success" class="button tooltipster" title="mensagem enviada.">enviar</a>
+                            <a id="enviar" href="#success" class="button tooltipster" title="">enviar</a>
                             
                         </div>
                     </form>
@@ -106,54 +105,41 @@
         </script>
         
         <script>
-            $(document).ready(function()
-			{
-				
-				$( ".tooltipster" ).click(function( event ) {
-							
-				  // Stop form from submitting normally
-				  event.preventDefault();
-				 
-				  // Get some values from elements on the page:
-				  var $form = $("#mail-form"),
-					name = $form.find( "input[name='name']" ).val(),
-					email = $form.find( "input[name='email']" ).val(),
-					telefone = $form.find( "input[name='telefone']" ).val(),
-					mensagem = $( "#msg" ).val(),
-					url = $form.attr( "action" );
-					errorMessage=""
-					if(name == ""){
-						errorMessage="Nome deve ser obrigatorio\n";
-					}
-					if(email == ""){
-						errorMessage=errorMessage+"email deve ser obrigatorio\n";
-					}
-					if(telefone == ""){
-						errorMessage=errorMessage+"telefone deve ser obrigatorio\n";
-					}
-					if(mensagem == ""){
-						errorMessage=errorMessage+"mensagem deve ser obrigatorio\n";
-					}
-					if(errorMessage !=""){
-						alert(errorMessage);
-					}else{
-						var posting = $.post( url, { name: name, email:email,telefone:telefone, msg:mensagem } );
-						   $('.tooltipster').tooltipster({
-							animation: 'fade',
-							delay: 200,
-							touchDevices: true,
-							trigger: 'click',
-							theme: 'tooltipster-default'
-                });
-					}
-					errorMessage = "";
-				  // Send the data using post
-				  
-				});
+            $(document).ready(function() {
 
-             
+                $( "#mail-form" ).click(function( event ) {
+
+                        event.preventDefault();
+
+                        // Get some values from elements on the page:
+                        var $form = $("#mail-form"),
+                        name = $form.find( "input[name='name']" ).val(),
+                        email = $form.find( "input[name='email']" ).val(),
+                        telefone = $form.find( "input[name='telefone']" ).val(),
+                        mensagem = $( "#msg" ).val(),
+                        url = $form.attr( "action" );
+
+                        // Send the data using post
+                        var posting = $.post( url, { name: name, email:email,telefone:telefone, msg:mensagem } );
+                    
+                    $('form')[0].reset();
+                    
+				});
                 
             });
+        </script>
+        
+        <script>
+        $(document).ready(function() {
+            $(".tooltipster").tooltipster({
+                content: 'mensagem enviada.',
+                animation: 'fade',
+                delay: 200,
+                touchDevices: true,
+                trigger: 'click',
+                theme: 'tooltipster-default'
+            });
+        });
         </script>
         
         <script>
