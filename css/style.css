@@ -56,8 +56,14 @@ body {
     background:#7a121c;
     background-image:url(../img/listra-1.png), url(../img/listra-2.png), url(../img/textura.png);
     background-repeat: no-repeat, no-repeat, repeat;
-    background-position: -204px -204px, right -175px top 24px;
-    height: 574px;
+    background-position: -204px -204px, right -175px top 54px;
+    height: 604px;
+}
+
+.produtos {
+    color:#e88281;
+    height: 800px;
+    background-position: -204px -204px, right -175px top 250px !important;
 }
 
 @media (max-width: 1023px) {
@@ -65,6 +71,12 @@ body {
         background-position: -204px -204px, right -175px top 0px;
         height: 454px;
     }
+    
+    .produtos {
+        height: 954px;
+        background-position: -204px -204px, right -175px top 404px !important;
+    }
+    
 }
 
 @media (max-width: 767px) {
@@ -72,6 +84,12 @@ body {
         background-position: -204px -204px, right -175px top 0px;
         height: 454px;
     }
+    
+    .produtos {
+        height: 1054px;
+        background-position: -204px -204px, right -175px top 504px !important;
+    }
+    
 }
 
 @media (max-width: 460px) {
@@ -85,6 +103,16 @@ body {
     height: 500px;
 
     overflow: visible;
+}
+
+h2 {
+    margin-top: 32px;
+
+    font-family: Kirvy;
+    color:#e88281;
+    line-height: 100%;
+    font-weight: lighter;
+    text-align: justify;
 }
 
 .slogan {
@@ -107,6 +135,7 @@ body {
     line-height: 300%;
     font-weight: normal;
     text-align: justify;
+    width: 183px;
 }
 
 .logo-centro {
