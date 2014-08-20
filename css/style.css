@@ -62,8 +62,8 @@ body {
 
 .produtos {
     color:#e88281;
-    height: 800px;
-    background-position: -204px -204px, right -175px top 250px !important;
+    height: 400px;
+    background-position: -204px -204px, right -175px top 0px !important;
 }
 
 @media (max-width: 1023px) {
@@ -73,7 +73,7 @@ body {
     }
     
     .produtos {
-        height: 954px;
+        height: 454px;
         background-position: -204px -204px, right -175px top 404px !important;
     }
     
@@ -86,7 +86,7 @@ body {
     }
     
     .produtos {
-        height: 1054px;
+        height: 554px;
         background-position: -204px -204px, right -175px top 504px !important;
     }
     
@@ -96,6 +96,11 @@ body {
     .texture {
         background-position: -204px -204px, right -225px top 0px;
         height: 454px;
+    }
+    
+    .produtos {
+        height: 854px;
+        background-position: -204px -204px, right -175px top 504px !important;
     }
 }
 
@@ -297,3 +302,12 @@ address {
     left: 75px;
     z-index: 99;
 }*/
+
+#lightSlider {
+    margin-top: 15px;
+}
+
+#lightSlider li {
+    list-style: none;
+    padding: 0 36px;
+}
