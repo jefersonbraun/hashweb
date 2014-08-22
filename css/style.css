@@ -289,25 +289,28 @@ address {
     text-align: center;
 }
 
-/*.success:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: inset 6px;
-    border-color: #57050D transparent transparent transparent;
-    border-top-style: solid;
+.swiper-container .arrow-left {
+    background: url(../img/controls.png) no-repeat left top;
     position: absolute;
-    bottom: -12px;
-    left: 75px;
-    z-index: 99;
-}*/
-
-#lightSlider {
-    margin-top: 15px;
+    left: 10px;
+    top: 100px;
+    margin-top: -15px;
+    width: 32px;
+    height: 32px;
+    z-index: 10;
 }
 
-#lightSlider li {
-    list-style: none;
-    padding: 0 36px;
+.swiper-container .arrow-right {
+    background: url(../img/controls.png) no-repeat right top;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    margin-top: -15px;
+    width: 32px;
+    height: 32px;
+    z-index: 10;
+}
+
+.slide-padding {
+    padding: 0 80px;
 }

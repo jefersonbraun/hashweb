@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link type="text/css" rel="stylesheet" href="css/lightSlider.css" />
+        <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css" />
     </head>
     <body>
         
@@ -36,42 +36,54 @@
         </div>
         
         <div class="texture produtos" data-scroll-index="0">
-            <div class="row">
-                <div class="large-3 medium-4 small-6 columns">
-                    <h2 class="slogan">
-                        PRO<br />DU<br />TOS
-                    </h2>
-                </div>
+                <h2 class="slogan">
+                    PRODUTOS
+                </h2>
                 
-                <ul id="lightSlider">
-                    <li>
-                      <h2>Sites</h2>
-                      <p>Desenvolvimento de site cross‐browser com layout inovador e atraente, com as tecnologias PHP, HTML5, CSS3, Java Script, J‐query. Todo o site desenvolvido vem com o sistema de gerenciamento de conteúdo (CMS), onde o usuário pode fazer atualizações no conteúdo do site quando necessário, sem a necessidade suporte.
-
-                    Desenvolvemos nossas aplicações encima do banco de dados PostgreSQL e MySQL, ou conforme a necessidade do cliente.  
-
-                    O desenvolvimento para e‐commerce segue o mesmo padrão de desenvolvimento do que é feito os nossos sites.
-
-                    Aplicação de SEO (Search Engine Optmization), é usado para optimização a busca do conteúdo do site, sempre colocando o site no topo dos sites de busca (google, yahoo, bing).</p>
-                    </li>
+                <div class="swiper-container">
                     
-                    <li>
-                      <h2>Aplicativos Mobile</h2>
-                      <p>Desenvolvemos aplicativos para suporte mobile, smartphones e tablets. Conforme a necessidade da empresa.</p>
-                    </li>
+                    <a class="arrow-left hidden-xs" href="#"></a>
+                    <a class="arrow-right hidden-xs" href="#"></a>
+                    <a class="arrow-right hidden-xs" href="#"></a>
                     
-                    <li>
-                        <h2>Social Mídia</h2>
-                        <p>A aplicação de social mídia consiste em divulgar o produto e a marca nas redes sociais como facebook, twitter, instagram, foursquare. Criamos conteúdo com imagens com direitos autorais reservados e também com imagens disponibilizadas pela empresa contratante. Textos, chamadas e promoções de acordo com o contratante.</p>
-                    </li>
-                    
-                    <li>
-                        <h2>Artes</h2>
-                        <p>Desenvolvemos banners, vetorização de imagens, flyers, etiquetas, tratamentos de imagens usando o photoshop como principal ferramenta de trabalho.</p>
-                    </li>
-                </ul>
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide"> 
+                        <div class="slide-padding">
+                            <h2>Sites</h2>
+                            <p>Desenvolvimento de site cross‐browser com layout inovador e atraente, com as tecnologias PHP, HTML5, CSS3, Java Script, J‐query. Todo o site desenvolvido vem com o sistema de gerenciamento de conteúdo (CMS), onde o usuário pode fazer atualizações no conteúdo do site quando necessário, sem a necessidade suporte.
+
+                            Desenvolvemos nossas aplicações encima do banco de dados PostgreSQL e MySQL, ou conforme a necessidade do cliente.  
+
+                            O desenvolvimento para e‐commerce segue o mesmo padrão de desenvolvimento do que é feito os nossos sites.
+
+                            Aplicação de SEO (Search Engine Optmization), é usado para optimização a busca do conteúdo do site, sempre colocando o site no topo dos sites de busca (google, yahoo, bing).</p>
+                        </div>
+                      </div>
+                      
+                      <div class="swiper-slide">
+                        <div class="slide-padding">
+                            <h2>Aplicativos Mobile</h2>
+                            <p>Desenvolvemos aplicativos para suporte mobile, smartphones e tablets. Conforme a necessidade da empresa.</p>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide"> 
+                        <div class="slide-padding">
+                            <h2>Social Mídia</h2>
+                            <p>A aplicação de social mídia consiste em divulgar o produto e a marca nas redes sociais como facebook, twitter, instagram, foursquare. Criamos conteúdo com imagens com direitos autorais reservados e também com imagens disponibilizadas pela empresa contratante. Textos, chamadas e promoções de acordo com o contratante.</p>
+                        </div>
+                      </div>
+                      
+                      <div class="swiper-slide">
+                        <div class="slide-padding">
+                            <h2>Artes</h2>
+                            <p>Desenvolvemos banners, vetorização de imagens, flyers, etiquetas, tratamentos de imagens usando o photoshop como principal ferramenta de trabalho.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-        </div>
         
         <div class="texture-2" data-scroll-index="1">
             <div class="row">
@@ -118,20 +130,28 @@
         <script src="js/foundation/foundation.reveal.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="js/scrollIt.min.js"></script>
-        <script src="js/jquery.lightSlider.min.js"></script>
+        <script src="js/idangerous.swiper.js"></script>
         
         <script>
             $(document).foundation();
         </script>
         
         <script type="text/javascript">
-          $(document).ready(function() {
-            $("#lightSlider").lightSlider({
-                slideWidth:800,
-                slideMargin:100,
-                pager: false
-            });
-          });
+            window.onload = function() {
+              var mySwiper = new Swiper('.swiper-container',{
+                mode:'horizontal',
+                loop: true
+              });
+
+                $('.arrow-left').on('click', function(e){
+                    e.preventDefault(),
+                    mySwiper.swipePrev()
+                })
+                $('.arrow-right').on('click', function(e){
+                    e.preventDefault(),
+                    mySwiper.swipeNext()
+                });
+            }
         </script>
         
         <script>
