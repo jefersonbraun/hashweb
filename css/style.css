@@ -61,6 +61,12 @@ body {
 }
 
 .produtos {
+    background:#7a121c;
+    background-image:url(../img/listra-1.png), url(../img/listra-3.png), url(../img/textura.png);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: -204px -204px, right -175px top 54px;
+    height: 604px;
+
     color:#e88281;
     height: 400px;
     background-position: -204px -204px, right -175px top 0px !important;
